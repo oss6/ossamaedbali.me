@@ -1,0 +1,14 @@
+.card {
+  border: 1px solid #dadada;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  height: 100%;
+}
+
+a.card {
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.card__content {
+  padding: 1rem 1.25rem;
+}

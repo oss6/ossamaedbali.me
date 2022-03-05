@@ -1,0 +1,13 @@
+.post-image {
+  width: 100%;
+}
+
+.post-title {
+  font-size: 1.125rem;
+  margin-bottom: 0.45rem;
+}
+
+.post-published-at {
+  font-size: 0.85rem;
+  color: #454545;
+}
