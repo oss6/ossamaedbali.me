@@ -47,7 +47,7 @@ export default function PostPage() {
         }
 
         {postData && postData.categories && postData.categories.length > 0 &&
-          <div className='post-categories'>Categories: {postData.categories.map(c => <a key={c._id} href={'/categories/' + c._id}>{c.title}</a>)}</div>
+          <div className='post-categories'>Categories: {postData.categories.map(c => <span key={c._id}>{c.title}</span>)}</div>
         }
       </div>
 
