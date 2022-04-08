@@ -52,6 +52,11 @@ table {
 
 /* --- END: CSS Reset --- */
 
+/* ===========================
+ * General
+ * ===========================
+ */
+
 body {
   font-family: 'Work Sans', sans-serif;
   line-height: 1.5;
@@ -75,6 +80,80 @@ a {
   }
 }
 
+ul.list {
+  list-style: disc;
+  padding: 1rem 0 1rem 2.5rem;
+}
+
+ol.list {
+  list-style: decimal;
+  padding: 1rem 0 1rem 2.5rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+th {
+  text-align: left;
+  background-color: #f7f7f7;
+  font-weight: 500;
+}
+
+th, td {
+  padding: 0.5rem 0.8rem;
+}
+
+pre {
+  white-space: pre-wrap;
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 0.75rem 0.95rem;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+code:not([class*="language-typescript"]) {
+  background-color: #f1f5f9;
+  padding: 0.1rem 0.35rem;
+  font-family: monospace;
+}
+
+/* ===========================
+ * Page header
+ * ===========================
+ */
+
+.page-header {
+  margin-bottom: 1.25rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header h2 {
+  font-size: 1.35rem;
+}
+
+/* ===========================
+ * Cards
+ * ===========================
+ */
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -85,4 +164,127 @@ a {
 .cards > * {
   width: 48%;
   margin-bottom: 2rem;
+}
+
+.btn {
+  font-family: inherit;
+  border: 2px solid #000;
+  text-decoration: none;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+  padding: 0.45rem 1rem;
+}
+
+/* ===========================
+ * Post content
+ * ===========================
+ */
+
+.post-content-wrapper {
+  padding-top: 2rem;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.post-content-wrapper h2 {
+  padding: 2rem 0 0.65rem 0;
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+
+.post-content-wrapper h3 {
+  padding: 1rem 0 0.45rem 0;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.post-content-wrapper h4 {
+  padding: 0.75rem 0 0.45rem 0;
+  font-size: 1.075rem;
+  font-weight: 600;
+}
+
+.post-content-wrapper ul {
+  list-style: circle;
+  padding: 1rem 0 1rem 2.5rem;
+}
+
+.post-content-wrapper ol {
+  list-style: decimal;
+  padding: 1rem 0 1rem 2.5rem;
+}
+
+.post-content-wrapper p {
+  padding-bottom: 0.8rem;
+}
+
+/* ===========================
+ * Search area
+ * ===========================
+ */
+
+.search-area__search-bar-wrapper {
+  display: flex;
+}
+
+.search-area__filters {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem 0;
+}
+
+.search-area__filter-btn {
+  font-family: inherit;
+  background-color: #fff;
+  cursor: pointer;
+  border: 1px solid #000;
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-right: 0.65rem;
+  padding: 0.25rem 0.55rem;
+  margin-bottom: 0.65rem;
+}
+
+.search-area__filter-btn--active {
+  background-color: #000;
+  color: #fff;
+}
+
+.search-area__search-bar {
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px solid #000;
+  border-right: none;
+  padding: 0.45rem 0.55rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.search-area__search-bar:focus {
+  outline: 1px solid #565656;
+}
+
+.search-area__search-btn {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+}
+
+.search-area__search-results-details {
+  padding: 1rem 0;
+}
+
+.search-area__search-results-clear {
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: underline;
 }

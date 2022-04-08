@@ -5,34 +5,3 @@
 .post-categories {
   padding-top: 0.55rem;
 }
-
-.post-content-wrapper {
-  padding-top: 2rem;
-  font-size: 1.125rem;
-  line-height: 1.75;
-}
-
-.post-content-wrapper h2 {
-  font-size: 1.65rem;
-  padding: 2rem 0 0.65rem 0;
-  font-weight: 500;
-}
-
-.post-content-wrapper h3 {
-  font-size: 1.35rem;
-  font-weight: 500;
-}
-
-.post-content-wrapper ul {
-  list-style: circle;
-  padding: 1rem 0 1rem 2.5rem;
-}
-
-.post-content-wrapper ol {
-  list-style: decimal;
-  padding: 1rem 0 1rem 2.5rem;
-}
-
-.post-content-wrapper p {
-  padding-bottom: 0.8rem;
-}

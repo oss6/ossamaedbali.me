@@ -1,52 +1,16 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import sanityClient from '../client.js';
 import { PortableText } from '@portabletext/react';
-import imageUrlBuilder from '@sanity/image-url'
 import './PostPage.css';
 import { format } from 'date-fns';
 import Skeleton from 'react-loading-skeleton';
-
-const builder = imageUrlBuilder(sanityClient);
-
-function urlFor(source) {
-  return builder.image(source)
-}
+import { portableTextComponents } from '../shared/portable-text-components.js';
 
 export default function PostPage() {
   const [postData, setPostData] = useState(null);
   const { slug } = useParams();
   const { state } = useLocation();
-
-  const portableTextComponents = useMemo(() => ({
-    types: {
-      image: ({ value }) => {
-        return (
-          <img src={urlFor(value)} alt={value.caption} title={value.caption} style={{width: '100%'}} />
-        );
-      },
-      iframe: ({ value }) => {
-        return (
-          <iframe title={value.title} style={{width: '100%'}} height={value.height} src={value.url} frameBorder="0" scrolling="no" allowFullScreen></iframe>
-        );
-      }
-    },
-    marks: {
-      internalLinkSource: ({ children, value }) => {
-        return (
-          <a href={'#' + value.iref}>{children}</a>
-        );
-      },
-      internalLinkTarget: ({ children, value }) => {
-        return (
-          <>
-          <span id={value.irefTarget}></span>
-          {children}
-          </>
-        )
-      }
-    }
-  }), []);
 
   useEffect(() => {
     sanityClient

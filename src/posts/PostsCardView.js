@@ -24,6 +24,12 @@ export default function PostsCardView(props) {
     return <LoadingBoxes />
   }
 
+  if (props.posts && props.posts.length === 0) {
+    return (
+      <p>No results found. Please change filters.</p>
+    )
+  }
+
   return (
     <div className='cards'>
     {props.posts && props.posts.map((post, index) =>

@@ -27,6 +27,7 @@ export default {
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},
         {title: 'Quote', value: 'blockquote'},
+        {title: 'Preformatted', value: 'pre'}
       ],
       lists: [{title: 'Bullet', value: 'bullet'}],
       // Marks let you mark up inline text in the block editor.
@@ -36,6 +37,7 @@ export default {
         decorators: [
           {title: 'Strong', value: 'strong'},
           {title: 'Emphasis', value: 'em'},
+          {title: 'Code', value: 'code'},
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -119,6 +121,11 @@ export default {
           type: 'number'
         },
       ]
+    },
+    {
+      name: 'code',
+      title: 'Code Block',
+      type: 'code'
     }
   ],
 }

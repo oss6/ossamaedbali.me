@@ -4,6 +4,8 @@ import PostPage from './posts/PostPage';
 import PostsPage from './posts/PostsPage';
 import Home from './home/Home';
 import Work from './work/Work';
+import DigitalGarden from './digital-garden/DigitalGarden';
+import Note from './digital-garden/Note';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
               <Route element={<Work />} path="/work" />
               <Route element={<PostsPage />} path="/blog" />
               <Route element={<PostPage />} path="/blog/:slug" />
+              <Route element={<DigitalGarden />} path="/digital-garden" />
+              <Route element={<Note />} path="/digital-garden/:slug" />
             </Routes>
         </div>
         <footer className='app-footer container'>

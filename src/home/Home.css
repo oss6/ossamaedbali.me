@@ -11,3 +11,8 @@
   font-size: 1.25rem;
   font-weight: 500;
 }
+
+.view-all-posts {
+  display: flex;
+  justify-content: center;
+}

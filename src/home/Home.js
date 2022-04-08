@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import postsService from '../posts/posts.service';
 import PostsCardView from '../posts/PostsCardView';
 import './Home.css';
@@ -24,6 +25,10 @@ export default function Home() {
         <h2>Recent posts</h2>
 
         <PostsCardView posts={posts} />
+
+        <div className='view-all-posts'>
+          <Link to={'/blog'} className='btn'>View all</Link>
+        </div>
       </div>
     </div>
   );

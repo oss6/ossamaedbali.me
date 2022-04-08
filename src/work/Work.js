@@ -3,8 +3,10 @@ import './Work.css';
 
 export default function Work() {
   return (
-    <div>
-      <h1>Work</h1>
+    <div className='page'>
+      <header className='page-header'>
+        <h1>Work</h1>
+      </header>
 
       <div className='content'>
         <p>
