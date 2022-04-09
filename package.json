@@ -2,6 +2,19 @@
   "name": "ossamaedbali.me",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync build/ s3://ossamaedbali.me",
+    "release": "standard-version"
+  },
+  "standard-version": {
+    "scripts": {
+      "posttag": "git push --follow-tags origin master"
+    }
+  },
   "dependencies": {
     "@portabletext/react": "^1.0.3",
     "@sanity/client": "^3.1.0",
@@ -18,13 +31,6 @@
     "react-scripts": "5.0.0",
     "react-syntax-highlighter": "^15.5.0",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "aws s3 sync build/ s3://ossamaedbali.me"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "standard-version": "^9.3.2"
   }
 }
