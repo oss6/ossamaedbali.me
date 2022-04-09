@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/oss6/ossamaedbali.me/compare/v0.1.1...v0.1.2) (2022-04-09)
+
+
+### Bug Fixes
+
+* deploy steps ([bb835f2](https://github.com/oss6/ossamaedbali.me/commit/bb835f2270239683b3b3241dc9929ba9adc082c1))
+
 ### 0.1.1 (2022-04-09)
 
 
