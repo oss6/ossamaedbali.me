@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/oss6/ossamaedbali.me/compare/v0.1.2...v0.1.3) (2022-04-09)
+
+
+### Bug Fixes
+
+* add checkout and setup-node in deploy.yml ([ceddeef](https://github.com/oss6/ossamaedbali.me/commit/ceddeef6ac9374fc97a280b9b5e50cae56f772d1))
+
 ### [0.1.2](https://github.com/oss6/ossamaedbali.me/compare/v0.1.1...v0.1.2) (2022-04-09)
 
 
