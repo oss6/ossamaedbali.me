@@ -1,4 +1,4 @@
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import Card from '../card/Card';
 import './Work.css';
 

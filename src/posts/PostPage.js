@@ -6,7 +6,7 @@ import './PostPage.css';
 import { format } from 'date-fns';
 import Skeleton from 'react-loading-skeleton';
 import { portableTextComponents } from '../shared/portable-text-components.js';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 export default function PostPage() {
   const [postData, setPostData] = useState(null);
