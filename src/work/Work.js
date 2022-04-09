@@ -1,9 +1,14 @@
+import Helmet from 'react-helmet';
 import Card from '../card/Card';
 import './Work.css';
 
 export default function Work() {
   return (
     <div className='page'>
+      <Helmet>
+        <title>Ossama Edbali | Work</title>
+      </Helmet>
+
       <header className='page-header'>
         <h1>Work</h1>
       </header>

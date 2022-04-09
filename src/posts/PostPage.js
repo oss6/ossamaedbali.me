@@ -6,6 +6,7 @@ import './PostPage.css';
 import { format } from 'date-fns';
 import Skeleton from 'react-loading-skeleton';
 import { portableTextComponents } from '../shared/portable-text-components.js';
+import Helmet from 'react-helmet';
 
 export default function PostPage() {
   const [postData, setPostData] = useState(null);
@@ -37,6 +38,10 @@ export default function PostPage() {
 
   return (
     <div>
+      <Helmet>
+        <title>Ossama Edbali | Blog</title>
+      </Helmet>
+
       <div className='post-header'>
         {(postData || state) &&
           <h1>{postData ? postData.title : state.title}</h1>

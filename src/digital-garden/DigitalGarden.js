@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Helmet from 'react-helmet';
 import { Link } from 'react-router-dom';
 import digitalGardenService from './digital-garden.service';
 
@@ -65,6 +66,10 @@ export default function DigitalGarden() {
 
   return (
     <div className='page'>
+      <Helmet>
+        <title>Ossama Edbali | Digital garden</title>
+      </Helmet>
+
       <header className='page-header'>
         <h1>Digital garden</h1>
         <h2>The digital garden is a way to cultivate the mind with quality content.</h2>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Helmet from 'react-helmet';
 import { Link } from 'react-router-dom';
 import postsService from '../posts/posts.service';
 import PostsCardView from '../posts/PostsCardView';
@@ -15,6 +16,10 @@ export default function Home() {
 
   return (
     <div>
+      <Helmet>
+        <title>Ossama Edbali</title>
+      </Helmet>
+
       <p className='intro'>
         Hi there, thanks for stopping by! I'm Ossama Edbali, software developer at <a href="https://www.ebi.ac.uk/">The European Bioinformatics Institute (EMBL-EBI)</a> and MSc Bioinformatics student at <a href='https://www.birmingham.ac.uk/'>The University of Birmingham</a>.
       </p>
