@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/oss6/ossamaedbali.me/compare/v0.1.3...v0.1.4) (2022-04-09)
+
+
+### Features
+
+* GH-2: add not found page ([9513a3e](https://github.com/oss6/ossamaedbali.me/commit/9513a3e2667d4f7bbe5ad25671e4c0c8744a5f8f)), closes [#2](https://github.com/oss6/ossamaedbali.me/issues/2)
+
 ### [0.1.3](https://github.com/oss6/ossamaedbali.me/compare/v0.1.2...v0.1.3) (2022-04-09)
 
 
