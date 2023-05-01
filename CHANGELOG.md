@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/oss6/ossamaedbali.me/compare/v0.1.4...v1.0.0) (2023-05-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade sanity
+
+### Features
+
+* upgrade sanity ([a5d6207](https://github.com/oss6/ossamaedbali.me/commit/a5d6207328011e33124855c693b688f4828e5b60))
+
 ### [0.1.4](https://github.com/oss6/ossamaedbali.me/compare/v0.1.3...v0.1.4) (2022-04-09)
 
 
