@@ -1,5 +1,6 @@
 import sanityClient from '../client.js';
 import imageUrlBuilder from '@sanity/image-url'
+import katex from 'katex';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
@@ -12,6 +13,7 @@ function urlFor(source) {
 export const portableTextComponents = {
   block: {
     pre: ({ children }) => <pre>{children}</pre>
+    // latex: ({ children }) => <pre>{children}</pre>
   },
   types: {
     image: ({ value }) => {
@@ -21,7 +23,15 @@ export const portableTextComponents = {
     },
     iframe: ({ value }) => {
       return (
-        <iframe title={value.title} style={{width: '100%'}} height={value.height} src={value.url} frameBorder="0" scrolling="no" allowFullScreen></iframe>
+        <iframe
+          title={value.title}
+          style={{ width: '100%', height: value.height }}
+          height='100%'
+          width='100%'
+          src={value.url}
+          frameBorder="0"
+          allowFullScreen
+        ></iframe>
       );
     },
     code: ({ value }) => {
@@ -30,6 +40,9 @@ export const portableTextComponents = {
           {value.code}
         </SyntaxHighlighter>
       )
+    },
+    latex: ({ value }) => {
+      return <span dangerouslySetInnerHTML={{ __html: katex.renderToString(value.body) }}></span>
     }
   },
   marks: {
