@@ -21,9 +21,9 @@ export default function Home() {
       </Helmet>
 
       <p className='intro'>
-        Hi there, thanks for stopping by! I'm Ossama Edbali, software developer at <a href="https://www.ebi.ac.uk/">The European Bioinformatics Institute (EMBL-EBI)</a> and MSc Bioinformatics student at <a href='https://www.birmingham.ac.uk/'>The University of Birmingham</a>.
+        Hi there, thanks for stopping by! I'm Ossama Edbali, research fellow in computational metabolomics at <a href="https://www.birmingham.ac.uk/">The University of Birmingham</a>.
       </p>
-      <p>I design and build bespoke web applications and websites. <a href="mailto: ossedb@gmail.com">Get in touch</a> to start something great! For more insights on what I do check out the <a href="/work">work</a> page.</p>
+      <p>I also design and build bespoke web applications and websites. <a href="mailto: ossedb@gmail.com">Get in touch</a> to start something great! For more insights on what I do check out the <a href="/work">work</a> page.</p>
       <p>I develop web applications, services, and APIs in <strong>Node JS</strong>, <strong>.NET</strong>, <strong>Laravel PHP</strong> for backend and <strong>React JS</strong> and <strong>Angular</strong> for frontend.</p>
 
       <div className='recent-posts'>

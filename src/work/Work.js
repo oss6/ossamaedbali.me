@@ -15,9 +15,8 @@ export default function Work() {
 
       <div className='content'>
         <p>
-          I currently work at <a href='https://www.ebi.ac.uk/'>The European Bioinformatics Institute</a> primarily
-          on <a href='https://www.ebi.ac.uk/ebisearch'>EBI Search</a>, among other projects
-          such as the <a href='https://www.covid19dataportal.org/'>COVID-19 Data Portal</a>.
+          I currently work at <a href='https://www.birmingham.ac.uk/'>The University of Birmingham</a> as a
+          research fellow in computational metabolomics at the <a href='https://www.birmingham.ac.uk/research/activity/phenome-centre'>Phenome Centre Birmingham (PCB)</a>.
         </p>
         <p>
           Throughout the years I worked in several fields ranging from education to web agencies, acquiring experience in both backend and frontend web development.
