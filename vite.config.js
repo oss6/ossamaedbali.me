@@ -13,4 +13,8 @@ export default defineConfig({
     // Keep CRA's output folder so `npm run deploy` and CI sync the same path
     outDir: 'build',
   },
+  test: {
+    environment: 'jsdom',
+    setupFiles: ['./src/test/setup.js'],
+  },
 });
