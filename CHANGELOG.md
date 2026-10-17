@@ -1,6 +1,25 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [2.0.0](https://github.com/oss6/ossamaedbali.me/compare/v1.0.0...v2.0.0) (2026-10-17)
+
+### ⚠ BREAKING CHANGES
+
+* `npm start`/`npm run dev` now run Vite, `npm test` is
+  temporarily unavailable, and Node.js 24 is required.
+* requires React 19.2.7+ and Node.js 22.22+ (react-router 8).
+* **studio:** the Studio now requires Node.js 24 (Sanity v6 needs
+  Node 22.12+) and React 19.2.
+
+### build
+
+* migrate from Create React App to Vite ([3f8557e](https://github.com/oss6/ossamaedbali.me/commit/3f8557eee7a5402d6f35adc6312563a0811bfeeb))
+
+### Features
+
+* **studio:** upgrade Sanity Studio to v6 ([d049ac0](https://github.com/oss6/ossamaedbali.me/commit/d049ac0688541dc460696b5d24b56b8831e03de9))
+* upgrade to React 19, React Router 8 and latest Sanity libraries ([61acf15](https://github.com/oss6/ossamaedbali.me/commit/61acf150f0e70279cb65596cd1ff972516792a08))
 
 ## [1.0.0](https://github.com/oss6/ossamaedbali.me/compare/v0.1.4...v1.0.0) (2023-05-01)
 
