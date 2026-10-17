@@ -1,19 +1,20 @@
+import {defineArrayMember, defineField, defineType} from 'sanity'
+
 /**
  * This is the schema definition for the rich text fields used for
- * for this blog studio. When you import it in schemas.js it can be
- * reused in other parts of the studio with:
+ * for this blog studio. It can be reused in other parts of the studio with:
  *  {
  *    name: 'someName',
  *    title: 'Some title',
  *    type: 'blockContent'
  *  }
  */
-export default {
+export default defineType({
   title: 'Block Content',
   name: 'blockContent',
   type: 'array',
   of: [
-    {
+    defineArrayMember({
       title: 'Block',
       type: 'block',
       // Styles let you set what your user can mark up blocks with. These
@@ -44,95 +45,91 @@ export default {
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
-          {
+          defineArrayMember({
             title: 'URL',
             name: 'link',
             type: 'object',
             fields: [
-              {
+              defineField({
                 title: 'URL',
                 name: 'href',
                 type: 'url',
-              },
+              }),
             ],
-          },
-          {
+          }),
+          defineArrayMember({
             title: 'Internal link source',
             name: 'internalLinkSource',
             type: 'object',
+            icon: () => 'ILS',
             fields: [
-              {
+              defineField({
                 title: 'Internal link source',
                 name: 'iref',
                 type: 'string'
-              }
-            ],
-            blockEditor: {
-              icon: () => 'ILS'
-            }
-          },
-          {
+              })
+            ]
+          }),
+          defineArrayMember({
             title: 'Internal link target',
             name: 'internalLinkTarget',
             type: 'object',
+            icon: () => 'ILT',
             fields: [
-              {
+              defineField({
                 title: 'Internal link target',
                 name: 'irefTarget',
                 type: 'string'
-              }
-            ],
-            blockEditor: {
-              icon: () => 'ILT'
-            }
-          }
+              })
+            ]
+          })
         ],
       },
       of: [
-        { type: 'latex', icon: () => 'MI', title: 'Inline math' }
+        defineArrayMember({ type: 'latex', icon: () => 'MI', title: 'Inline math' })
       ]
-    },
-    { type: 'latex', icon: () => 'MB', title: 'Math block' },
+    }),
+    defineArrayMember({ type: 'latex', icon: () => 'MB', title: 'Math block' }),
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
-    {
+    defineArrayMember({
       type: 'image',
       options: {hotspot: true},
       fields: [
-        {
+        defineField({
           name: 'caption',
           type: 'string',
           title: 'Caption'
-        }
+        })
       ]
-    },
-    {
+    }),
+    defineArrayMember({
       title: 'Iframe',
       name: 'iframe',
       type: 'object',
       fields: [
-        {
+        defineField({
           title: 'Title',
           name: 'title',
           type: 'string'
-        },
-        {
+        }),
+        defineField({
           title: 'URL',
           name: 'url',
           type: 'string'
-        },
-        {
+        }),
+        defineField({
           title: 'Height',
           name: 'height',
           type: 'number'
-        },
+        }),
       ]
-    },
-    {
+    }),
+    defineArrayMember({
       name: 'code',
       title: 'Code Block',
       type: 'code'
-    }
+    })
   ],
-}
+})

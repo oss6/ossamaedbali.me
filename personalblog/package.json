@@ -2,28 +2,33 @@
   "name": "personalblog",
   "private": true,
   "version": "1.0.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)",
-  "main": "package.json",
+  "description": "Sanity Studio for ossamaedbali.me",
+  "type": "module",
   "author": "Ossama Edbali <ossedb@gmail.com>",
   "license": "UNLICENSED",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
+    "dev": "sanity dev",
     "start": "sanity start",
     "build": "sanity build",
-    "dev": "sanity dev"
+    "lint": "eslint ."
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/code-input": "^4.1.0",
-    "@sanity/eslint-config-studio": "^2.0.0",
-    "@sanity/vision": "^3.9.1",
-    "eslint": "^8.6.0",
-    "prop-types": "^15.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sanity": "^3.9.1",
-    "sanity-plugin-latex-input": "^2.0.4",
-    "styled-components": "^5.2.0"
+    "@sanity/code-input": "^7.3.12",
+    "@sanity/vision": "^6.19.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "sanity": "^6.19.0",
+    "sanity-plugin-latex-input": "^3.0.10",
+    "styled-components": "^6.1.15"
+  },
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "^7.0.0",
+    "eslint": "^10.0.0"
   }
 }

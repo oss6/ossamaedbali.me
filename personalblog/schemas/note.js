@@ -1,14 +1,16 @@
-export default {
+import {defineArrayMember, defineField, defineType} from 'sanity'
+
+export default defineType({
   name: 'note',
   title: 'Note',
   type: 'document',
   fields: [
-    {
+    defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
-    },
-    {
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -16,23 +18,23 @@ export default {
         source: 'title',
         maxLength: 96,
       },
-    },
-    {
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
-    },
-    {
+    }),
+    defineField({
       name: 'notes',
       title: 'Notes',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'note'}}],
-    },
-    {
+      of: [defineArrayMember({type: 'reference', to: {type: 'note'}})],
+    }),
+    defineField({
       name: 'topics',
       title: 'Topics',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'topic'}}],
-    },
+      of: [defineArrayMember({type: 'reference', to: {type: 'topic'}})],
+    }),
   ],
-}
+})

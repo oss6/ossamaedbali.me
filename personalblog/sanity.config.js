@@ -1,5 +1,6 @@
 import { defineConfig } from 'sanity'
-import { deskTool } from 'sanity/desk'
+import { structureTool } from 'sanity/structure'
+import { visionTool } from '@sanity/vision'
 import { codeInput } from '@sanity/code-input'
 import { latexInput } from 'sanity-plugin-latex-input'
 import post from './schemas/post'
@@ -15,7 +16,8 @@ export default defineConfig({
   projectId: 'stxb7yu3',
   dataset: 'production',
   plugins: [
-    deskTool(),
+    structureTool(),
+    visionTool(),
     codeInput(),
     latexInput()
   ],
