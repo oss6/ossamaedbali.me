@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router';
 import sanityClient from '../client.js';
 import { PortableText } from '@portabletext/react';
 import './PostPage.css';
 import { format } from 'date-fns';
 import Skeleton from 'react-loading-skeleton';
 import { portableTextComponents } from '../shared/portable-text-components.jsx';
-import { Helmet } from 'react-helmet-async';
 
 export default function PostPage() {
   const [postData, setPostData] = useState(null);
@@ -38,9 +37,7 @@ export default function PostPage() {
 
   return (
     <div>
-      <Helmet>
-        <title>Ossama Edbali | Blog</title>
-      </Helmet>
+      <title>Ossama Edbali | Blog</title>
 
       <div className='post-header'>
         {(postData || state) &&

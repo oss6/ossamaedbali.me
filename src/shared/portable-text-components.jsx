@@ -1,13 +1,14 @@
 import sanityClient from '../client.js';
-import imageUrlBuilder from '@sanity/image-url'
+import { createImageUrlBuilder } from '@sanity/image-url'
 import katex from 'katex';
+import 'katex/dist/katex.min.css';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-const builder = imageUrlBuilder(sanityClient);
+const builder = createImageUrlBuilder(sanityClient);
 
 function urlFor(source) {
-  return builder.image(source)
+  return builder.image(source).url()
 }
 
 export const portableTextComponents = {

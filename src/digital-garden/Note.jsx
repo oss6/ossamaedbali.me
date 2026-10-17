@@ -1,8 +1,7 @@
 import { PortableText } from '@portabletext/react';
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import Skeleton from 'react-loading-skeleton';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router';
 import { portableTextComponents } from '../shared/portable-text-components';
 import digitalGardenService from './digital-garden.service';
 
@@ -19,9 +18,7 @@ export default function Note() {
 
   return (
     <div className='page'>
-      <Helmet>
-        <title>Ossama Edbali | Digital garden</title>
-      </Helmet>
+      <title>Ossama Edbali | Digital garden</title>
 
       <header className='page-header'>
         {(note || state) &&

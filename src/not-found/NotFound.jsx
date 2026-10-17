@@ -1,13 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import notFoundIllustration from './404.png';
 
 export default function NotFound() {
   return (
     <div className='page'>
-      <Helmet>
-        <title>Ossama Edbali | Page not found</title>
-      </Helmet>
+      <title>Ossama Edbali | Page not found</title>
 
       <header className='page-header'>
         <h1>Page not found</h1>

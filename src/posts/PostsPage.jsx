@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import postsService from './posts.service';
 import PostsCardView from './PostsCardView';
 
@@ -66,9 +65,7 @@ export default function PostsPage() {
 
   return (
     <div className='page'>
-      <Helmet>
-        <title>Ossama Edbali | Blog</title>
-      </Helmet>
+      <title>Ossama Edbali | Blog</title>
 
       <header className='page-header'>
         <h1>Blog</h1>

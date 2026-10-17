@@ -5,7 +5,7 @@ function filterByCategories(categories) {
     return '';
   }
 
-  return `&& references(${categories.map(c => `"${c}"`).join(', ')})`;
+  return '&& references($categories)';
 }
 
 function filterBySearchTerm(searchTerm) {
@@ -13,7 +13,7 @@ function filterBySearchTerm(searchTerm) {
     return '';
   }
 
-  return `&& ((title match "${searchTerm}") || (body[].children[].text match "${searchTerm}"))`;
+  return '&& ((title match $searchTerm) || (body[].children[].text match $searchTerm))';
 }
 
 const postsService = {
@@ -22,7 +22,7 @@ const postsService = {
     const filters = _filters || {};
 
     return sanityClient.fetch(`
-      *[_type == "post" ${filterByCategories(filters.categories)} ${filterBySearchTerm(filters.searchTerm)}] | order(publishedAt desc) ${options.limit ? `[0...${options.limit}]` : ''} {
+      *[_type == "post" ${filterByCategories(filters.categories)} ${filterBySearchTerm(filters.searchTerm)}] | order(publishedAt desc) ${options.limit ? '[0...$limit]' : ''} {
         title,
         slug,
         publishedAt,
@@ -34,7 +34,11 @@ const postsService = {
         },
         "name": author->name
       }
-    `);
+    `, {
+      categories: filters.categories || [],
+      searchTerm: filters.searchTerm || '',
+      limit: options.limit || 0
+    });
   },
 
   getCategories() {

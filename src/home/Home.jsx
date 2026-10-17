@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import postsService from '../posts/posts.service';
 import PostsCardView from '../posts/PostsCardView';
 import './Home.css';
@@ -16,14 +15,12 @@ export default function Home() {
 
   return (
     <div>
-      <Helmet>
-        <title>Ossama Edbali</title>
-      </Helmet>
+      <title>Ossama Edbali</title>
 
       <p className='intro'>
         Hi there, thanks for stopping by! I'm Ossama Edbali, research fellow in computational metabolomics at <a href="https://www.birmingham.ac.uk/">The University of Birmingham</a>.
       </p>
-      <p>I also design and build bespoke web applications and websites. <a href="mailto: ossedb@gmail.com">Get in touch</a> to start something great! For more insights on what I do check out the <a href="/work">work</a> page.</p>
+      <p>I also design and build bespoke web applications and websites. <a href="mailto: ossedb@gmail.com">Get in touch</a> to start something great! For more insights on what I do check out the <Link to='/work'>work</Link> page.</p>
       <p>I develop web applications, services, and APIs in <strong>Node JS</strong>, <strong>.NET</strong>, <strong>Laravel PHP</strong> for backend and <strong>React JS</strong> and <strong>Angular</strong> for frontend.</p>
 
       <div className='recent-posts'>

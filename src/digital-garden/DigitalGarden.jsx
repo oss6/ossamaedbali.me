@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import digitalGardenService from './digital-garden.service';
 
 export default function DigitalGarden() {
@@ -66,9 +65,7 @@ export default function DigitalGarden() {
 
   return (
     <div className='page'>
-      <Helmet>
-        <title>Ossama Edbali | Digital garden</title>
-      </Helmet>
+      <title>Ossama Edbali | Digital garden</title>
 
       <header className='page-header'>
         <h1>Digital garden</h1>

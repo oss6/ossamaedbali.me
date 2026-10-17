@@ -5,7 +5,7 @@ function filterByTopics(topics) {
     return '';
   }
 
-  return `&& references(${topics.map(t => `"${t}"`).join(', ')})`;
+  return '&& references($topics)';
 }
 
 function filterBySearchTerm(searchTerm) {
@@ -13,7 +13,7 @@ function filterBySearchTerm(searchTerm) {
     return '';
   }
 
-  return `&& ((title match "${searchTerm}") || (body[].children[].text match "${searchTerm}"))`;
+  return '&& ((title match $searchTerm) || (body[].children[].text match $searchTerm))';
 }
 
 const digitalGardenService = {
@@ -28,7 +28,10 @@ const digitalGardenService = {
         slug,
         topics[]->
       }
-    `);
+    `, {
+      topics: filters.topics || [],
+      searchTerm: filters.searchTerm || ''
+    });
   },
 
   getNote(slug) {
