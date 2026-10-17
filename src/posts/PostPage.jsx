@@ -5,7 +5,7 @@ import { PortableText } from '@portabletext/react';
 import './PostPage.css';
 import { format } from 'date-fns';
 import Skeleton from 'react-loading-skeleton';
-import { portableTextComponents } from '../shared/portable-text-components.js';
+import { portableTextComponents } from '../shared/portable-text-components.jsx';
 import { Helmet } from 'react-helmet-async';
 
 export default function PostPage() {
